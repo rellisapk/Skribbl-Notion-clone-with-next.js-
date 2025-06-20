@@ -1,26 +1,83 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* GLOBAL STYLING RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Font smoothing & background transitions */
+html {
+  scroll-behavior: smooth;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  -webkit-font-smoothing: antialiased;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply bg-white text-gray-800 dark:bg-gray-950 dark:text-gray-100;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.5;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* SCROLLBAR (Minimal & Subtle) */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(100, 116, 139, 0.2);
+  /* Slate-500/opacity */
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* DEFAULT FORM ELEMENTS */
+input,
+textarea,
+select {
+  @apply bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-sm text-gray-800 dark:text-gray-100 px-3 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+  transition: all 0.2s ease-in-out;
+}
+
+/* BUTTON STYLES */
+button {
+  @apply transition duration-200 ease-in-out;
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+  /* blue-500 */
+}
+
+/* LINKS */
+a {
+  @apply text-blue-600 hover:underline dark:text-blue-400;
+  transition: color 0.2s ease-in-out;
+}
+
+/* MODAL OVERLAY */
+.modal-overlay {
+  @apply fixed inset-0 bg-black bg-opacity-40 z-50 flex items-center justify-center;
+}
+
+/* CUSTOM CARD SHADOW */
+.shadow-sm {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.shadow-md {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.shadow-xl {
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
 }
