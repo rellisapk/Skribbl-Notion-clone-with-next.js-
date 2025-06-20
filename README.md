@@ -1,7 +1,5 @@
 # ✨ Skribbl - Notion-Style Todo App
 
-![Skribbl Banner](./public/screenshot-banner.png)
-
 Skribbl is a sleek, Gen-Z-inspired Notion-style todo app built with **Next.js**, designed for fast, intuitive task management. It supports categorized todo boards, subtask checklists, drag-and-drop interactions. You can easily manage your tasks in a modern UI — think Trello + Notion vibes!
 
 ---
