@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ✨ Skribbl - Notion-Style Todo App
 
-## Getting Started
+![Skribbl Banner](./public/screenshot-banner.png)
 
-First, run the development server:
+Skribbl is a sleek, Gen-Z-inspired Notion-style todo app built with **Next.js**, designed for fast, intuitive task management. It supports categorized todo boards, subtask checklists, drag-and-drop interactions. You can easily manage your tasks in a modern UI — think Trello + Notion vibes!
+
+---
+
+## 🎯 Features
+
+- ✅ Create, edit, and delete tasks with ease
+- ✅ Support for subtasks with checkbox state sync
+- ✅ Drag and drop tasks and subtasks (DnD Kit)
+- ✅ Category-based task grouping (e.g., `New`, `Ongoing`, `Completed`)
+- ✅ Beautiful modal for editing tasks
+- ✅ Upload files per task
+- ✅ Add remarks and tags to each task
+- ✅ Persistent state saved to localStorage
+- ✅ Dark mode toggle with collapsible sidebar
+- ✅ Responsive and Gen-Z-friendly UI
+
+---
+
+## 📸 Screenshots
+
+### 🧱 Board View
+![Board View](./assets/screenshots/Skribbl_1.png)
+![Board View](./assets/screenshots/Skribbl_4.png)
+
+### 🗂️ Task Modal with Subtasks & Upload
+![Task Modal](./assets/screenshots/Skribbl_3.png)
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend**: [Next.js](https://nextjs.org/), [TypeScript](https://www.typescriptlang.org/)
+- **Drag & Drop**: [@dnd-kit](https://dndkit.com/)
+- **Styling**: SCSS / Tailwind CSS
+- **State**: `useState` + `localStorage` persistence
+- **File Upload**: Stored in-memory or linked via preview
+
+---
+
+## 🚀 Getting Started
 
 ```bash
+git clone https://github.com/rellisapk/Skribbl-Notion-clone-with-next.js-.git
+cd Skribbl-Notion-clone-with-next.js-
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

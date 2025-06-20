@@ -35,10 +35,10 @@ export default function CategoryColumn({
         >
             {/* Header */}
             <div className="flex justify-between items-center mb-4">
-                <h2 className="text-lg font-semibold text-gray-800 dark:text-gray-100">{title}</h2>
+                <h2 className="text-lg font-semibold text-gray-900">{title}</h2>
                 <button
                     onClick={() => onDeleteCategory(categoryId)}
-                    className="text-gray-400 hover:text-red-500 transition"
+                    className="text-gray-900 transition"
                     title="Delete Category"
                 >
                     <FaTrash />
